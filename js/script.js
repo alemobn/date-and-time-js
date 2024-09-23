@@ -57,7 +57,7 @@ function addDate() {
     weekDayConvert();
     monthConvert();
 
-    title.innerHTML = ``;
+    title.innerHTML = `${weekDay}, ${date.getDate()} de ${month.toLowerCase()} de ${date.getFullYear()}`;
 }
 
 addDate();
