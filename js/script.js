@@ -60,16 +60,22 @@ function addDate() {
         month = month.toLowerCase();
         year = date.getFullYear();
     }
-
+    
     function addZeroToLeft(num) {
         return num >= 10 ? num : `0${num}`
+    }
+
+    function hoursFormat() {
+        hours = date.getHours()
+        minutes = addZeroToLeft(date.getMinutes());
     }
 
     weekDayConvert();
     monthConvert();
     dateFormat();
+    hoursFormat();
 
-    title.innerHTML = `${weekDay}, ${day} de ${month} de ${year}<br>${date.getHours()}:${addZeroToLeft(date.getMinutes())}`;
+    title.innerHTML = `${weekDay}, ${day} de ${month} de ${year}<br>${hours}:${minutes}`;
 }
 
 addDate();
