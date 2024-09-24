@@ -54,10 +54,14 @@ function addDate() {
         }
     }
 
+    function addZeroToLeft(num) {
+        return num >= 10 ? num : `0${num}`
+    }
+
     weekDayConvert();
     monthConvert();
 
-    title.innerHTML = `${weekDay}, ${date.getDate()} de ${month.toLowerCase()} de ${date.getFullYear()}<br>${date.getHours()}:${date.getMinutes()}`;
+    title.innerHTML = `${weekDay}, ${date.getDate()} de ${month.toLowerCase()} de ${date.getFullYear()}<br>${date.getHours()}:${addZeroToLeft(date.getMinutes())}`;
 }
 
 addDate();
