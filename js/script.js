@@ -54,14 +54,22 @@ function addDate() {
         }
     }
 
+    function dateFormat() {
+        weekDay = weekDay;
+        day = date.getDate();
+        month = month.toLowerCase();
+        year = date.getFullYear();
+    }
+
     function addZeroToLeft(num) {
         return num >= 10 ? num : `0${num}`
     }
 
     weekDayConvert();
     monthConvert();
+    dateFormat();
 
-    title.innerHTML = `${weekDay}, ${date.getDate()} de ${month.toLowerCase()} de ${date.getFullYear()}<br>${date.getHours()}:${addZeroToLeft(date.getMinutes())}`;
+    title.innerHTML = `${weekDay}, ${day} de ${month} de ${year}<br>${date.getHours()}:${addZeroToLeft(date.getMinutes())}`;
 }
 
 addDate();
