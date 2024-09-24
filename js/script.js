@@ -62,11 +62,11 @@ function addDate() {
     }
     
     function addZeroToLeft(num) {
-        return num >= 10 ? num : `0${num}`
+        return num >= 10 ? num : `0${num}`;
     }
 
     function hoursFormat() {
-        hours = date.getHours()
+        hours = addZeroToLeft(date.getHours());
         minutes = addZeroToLeft(date.getMinutes());
     }
 
